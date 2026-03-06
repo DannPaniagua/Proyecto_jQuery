@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto — Pan de Vida Bakery</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
+    <link rel="stylesheet" href="/CSS/estilos.css" />
+
+    <style>
+        /* estilos específicos de error inline */
+        .campo-error {
+            border-color: #c0392b !important;
+            background: #fff5f5 !important;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── HEADER ───────────────────────────────────── -->
+<header>
+    <div class="fecha-bar">
+        <span id="reloj">Cargando fecha...</span>
+    </div>
+
+    <div id="logo">
+        <h1>🍞 Pan de Vida</h1>
+        <p class="tagline">Panadería Artesanal · Mérida, Yucatán</p>
+    </div>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ── HERO ─────────────────────────────────────── -->
+<div class="page-hero">
+    <h2>Contáctanos</h2>
+    <p>Pedidos especiales, eventos y sugerencias — estamos para servirte</p>
+</div>
+
+<!-- ── FORMULARIO ────────────────────────────────── -->
+<div class="contacto-wrap">
+    <h2>Envíanos un mensaje</h2>
+    <p class="sub">Todos los campos marcados son obligatorios</p>
+
+    <form id="form-contacto" novalidate>
+
+        <!-- Nombre -->
+        <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Ej. María González"
+                autocomplete="off" />
+            <span class="error-msg" id="error-nombre">
+                Por favor ingresa tu nombre (mínimo 3 caracteres).
+            </span>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="ejemplo@correo.com"
+                autocomplete="off" />
+            <span class="error-msg" id="error-email">
+                Por favor ingresa un correo electrónico válido.
+            </span>
+        </div>
+
+        <!-- Teléfono (opcional) -->
+        <div class="form-group">
+            <label for="telefono">Teléfono <small style="font-weight:300;">(opcional)</small></label>
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="(999) 123-4567"
+                autocomplete="off" />
+            <span class="error-msg" id="error-telefono">
+                El teléfono ingresado no parece válido.
+            </span>
+        </div>
+
+        <!-- Asunto -->
+        <div class="form-group">
+            <label for="asunto">Motivo de contacto *</label>
+            <select id="asunto" name="asunto">
+                <option value="">— Selecciona una opción —</option>
+                <option value="pedido">Pedido especial o por mayoreo</option>
+                <option value="evento">Cotización para evento</option>
+                <option value="sugerencia">Sugerencia o comentario</option>
+                <option value="queja">Queja o reclamación</option>
+                <option value="otro">Otro</option>
+            </select>
+            <span class="error-msg" id="error-asunto">
+                Por favor selecciona un motivo de contacto.
+            </span>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="form-group">
+            <label for="mensaje">Mensaje *</label>
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="Cuéntanos en qué podemos ayudarte..."
+                rows="5"></textarea>
+            <span class="error-msg" id="error-mensaje">
+                El mensaje debe tener al menos 10 caracteres.
+            </span>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+
+        <div class="mensaje-ok" id="mensaje-ok">
+            ✅ ¡Gracias por tu mensaje! Nos pondremos en contacto contigo a la brevedad.
+        </div>
+
+    </form>
+</div>
+
+<!-- ── FOOTER ─────────────────────────────────────── -->
+<footer>
+    <span>© 2024 Pan de Vida · Panadería Artesanal · Mérida, Yucatán</span>
+    <a href="#" class="subir">↑ Ir arriba</a>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="/JS/main.js"></script>
+</body>
+</html>

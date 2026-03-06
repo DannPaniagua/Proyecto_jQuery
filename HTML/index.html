@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pan de Vida — Panadería Artesanal · Mérida</title>
+
+    <!-- bxSlider CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="/CSS/estilos.css" />
+</head>
+<body>
+
+<!-- ── HEADER ───────────────────────────────────── -->
+<header>
+    <!-- Fecha y hora (JavaScript) -->
+    <div class="fecha-bar">
+        <span id="reloj">Cargando fecha...</span>
+    </div>
+
+    <div id="logo">
+        <h1>🍞 Pan de Vida</h1>
+        <p class="tagline">Panadería Artesanal · Mérida, Yucatán</p>
+    </div>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ── SLIDER (bxSlider — mínimo 4 imágenes) ────── -->
+<div id="slider-wrap">
+    <div class="galeria-wrap">
+        <div class="galeria">
+            <div>
+                <img
+                  src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=860&q=80"
+                  title="Pan artesanal recién horneado"
+                  alt="Pan artesanal" />
+            </div>
+            <div>
+                <img
+                  src="https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=860&q=80"
+                  title="Croissants dorados y hojaldrados"
+                  alt="Croissants" />
+            </div>
+            <div>
+                <img
+                  src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=860&q=80"
+                  title="Pastelería fina de temporada"
+                  alt="Pastelería" />
+            </div>
+            <div>
+                <img
+                  src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=860&q=80"
+                  title="Baguettes crujientes al estilo francés"
+                  alt="Baguettes" />
+            </div>
+            <div>
+                <img
+                  src="https://clubvelas.velasresorts.com/wp-content/uploads/2023/06/conchas-mexicanas.jpg"
+                  title="Conchas y pan dulce yucateco"
+                  alt="Pan dulce" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── UBICACIÓN ─────────────────────────────────── -->
+<section class="ubicacion">
+    <h2>Encuéntranos</h2>
+
+    <div class="bloque">
+        <h4>📍 Dirección</h4>
+        <p>
+            Calle 60 No. 430, Col. Centro<br />
+            Mérida, Yucatán, C.P. 97000
+        </p>
+        <p style="margin-top:8px;">
+            📞 (999) 123-4567<br />
+            ✉️ hola@pandevida.mx
+        </p>
+    </div>
+
+    <div class="bloque">
+        <h4>🕐 Horarios</h4>
+        <p>
+            Lunes a Viernes<br />
+            <strong>7:00 am – 8:00 pm</strong>
+        </p>
+        <p style="margin-top:10px;">
+            Sábados y Domingos<br />
+            <strong>8:00 am – 6:00 pm</strong>
+        </p>
+    </div>
+
+    <div class="bloque">
+        <h4>🍞 Especialidades</h4>
+        <p>
+            Pan de elote · Conchas yucatecas<br />
+            Marquesitas · Polvorón de naranja<br />
+            Croissants · Baguettes artesanales
+        </p>
+    </div>
+</section>
+
+<!-- ── MAPA ──────────────────────────────────────── -->
+<section class="mapa">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.7!2d-89.6237!3d20.9674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5670f3a1e4a1c7%3A0x6e9f8e1f3a2b4c5d!2sCalle%2060%2C%20M%C3%A9rida%2C%20Yuc.!5e0!3m2!1ses-419!2smx!4v1680000000000!5m2!1ses-419!2smx"
+        width="800"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa Pan de Vida Bakery">
+    </iframe>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────── -->
+<footer>
+    <span>© 2024 Pan de Vida · Panadería Artesanal · Mérida, Yucatán</span>
+    <a href="#" class="subir">↑ Ir arriba</a>
+</footer>
+
+<!-- jQuery + bxSlider + app.js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="/JS/main.js"></script>
+</body>
+</html>
