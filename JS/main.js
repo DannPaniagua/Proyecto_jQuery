@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    /* ocultar mensaje de éxito al iniciar */
+    $('#mensaje-ok').hide();
+
     /* ── FECHA Y HORA ──────────────────────────────── */
     function mostrarFecha() {
         var ahora = new Date();
@@ -18,6 +21,7 @@ $(document).ready(function () {
 
         var cadena = diaNom + ', ' + dia + ' de ' + mes + ' de ' + anio +
                      ' &nbsp;|&nbsp; ' + horas + ':' + minutos + ':' + secs;
+
         $('#reloj').html(cadena);
     }
 
@@ -44,10 +48,11 @@ $(document).ready(function () {
 
     /* ── VALIDACIÓN FORMULARIO CONTACTO ─────────────── */
     $('#form-contacto').on('submit', function (e) {
+
         e.preventDefault();
         var valido = true;
 
-        /* Limpiar errores previos */
+        /* limpiar errores anteriores */
         $('.error-msg').hide();
         $('input, textarea, select').removeClass('campo-error');
 
@@ -62,16 +67,19 @@ $(document).ready(function () {
         /* Email */
         var email = $('#email').val().trim();
         var reEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (!reEmail.test(email)) {
             $('#error-email').show();
             $('#email').addClass('campo-error');
             valido = false;
         }
 
-        /* Teléfono (opcional, pero si se escribe debe ser válido) */
+        /* Teléfono (opcional) */
         var tel = $('#telefono').val().trim();
+
         if (tel !== '') {
             var reTel = /^[\d\s\-\+\(\)]{7,15}$/;
+
             if (!reTel.test(tel)) {
                 $('#error-telefono').show();
                 $('#telefono').addClass('campo-error');
@@ -88,23 +96,37 @@ $(document).ready(function () {
 
         /* Mensaje */
         var mensaje = $('#mensaje').val().trim();
+
         if (mensaje.length < 10) {
             $('#error-mensaje').show();
             $('#mensaje').addClass('campo-error');
             valido = false;
         }
 
+        /* SI TODO ES VÁLIDO */
         if (valido) {
+
+            /* mostrar mensaje bonito */
             $('#mensaje-ok').fadeIn();
+
+            /* limpiar formulario */
             $('#form-contacto')[0].reset();
-            $('html, body').animate({ scrollTop: $('#mensaje-ok').offset().top - 100 }, 500);
+
+            /* scroll hacia el mensaje */
+            $('html, body').animate({
+                scrollTop: $('#mensaje-ok').offset().top - 100
+            }, 500);
         }
+
     });
 
-    /* ── IR ARRIBA (smooth) ────────────────────────── */
+    /* ── BOTÓN IR ARRIBA ───────────────────────────── */
     $('.subir').on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, 700);
+
+        $('html, body').animate({
+            scrollTop: 0
+        }, 700);
     });
 
 });
