@@ -107,6 +107,8 @@ nav#menu ul li a.active {
 .galeria-wrap {
     width: 100%;
     max-width: 860px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .galeria img {
